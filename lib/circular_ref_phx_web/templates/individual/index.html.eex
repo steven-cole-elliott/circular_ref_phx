@@ -1,0 +1,31 @@
+<p> Individuals </p>
+
+<table>
+
+<thead>
+  <tr>
+    <th>Individual ID</th>
+    <th>Master Alias ID</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Date of Birth</th>
+    <th>Actions</th>
+  </tr>
+</thead>
+<tbody>
+  <%= for individual <- @individuals do %>
+    <tr>
+      <td><%= individual.id %></td>
+      <td><%= individual.master_alias.id %></td>
+      <td><%= individual.master_alias.name %></td>
+      <td><%= individual.master_alias.gender %></td>
+      <td><%= individual.master_alias.date_of_bith %></td>
+      <td><%= link "Edit", to: individual_path(@conn, :edit, individual) %></td>
+    </tr>
+
+  <% end %>
+
+</tbody>
+
+
+</table>
