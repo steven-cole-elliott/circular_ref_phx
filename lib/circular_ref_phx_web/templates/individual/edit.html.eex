@@ -32,8 +32,17 @@
       <%= error_tag master_alias, :date_of_bith %>
     </div>
 
-    <div class="form-group" />
-      <%= submit "SAVE", class: "btn btn-primary" %>
-    </div>
+
   <% end %>
+
+  <div class="form-group" />
+    <%= label f, :status, class: "control-label" %>
+    <%= text_input f, :status, class: "form-control" %>
+    <%= error_tag f, :status %>
+  </div>
+
+  <div class="form-group" />
+    <%= submit "SAVE", class: "btn btn-primary" %>
+  </div>
+
 <% end %>

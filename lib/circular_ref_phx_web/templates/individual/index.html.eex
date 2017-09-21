@@ -9,7 +9,9 @@
     <th>Name</th>
     <th>Gender</th>
     <th>Date of Birth</th>
+    <th>Status</th>
     <th>Actions</th>
+
   </tr>
 </thead>
 <tbody>
@@ -20,6 +22,7 @@
       <td><%= individual.master_alias.name %></td>
       <td><%= individual.master_alias.gender %></td>
       <td><%= individual.master_alias.date_of_bith %></td>
+      <td><%= individual.status %></td>
       <td><%= link "Edit", to: individual_path(@conn, :edit, individual) %></td>
     </tr>
 
