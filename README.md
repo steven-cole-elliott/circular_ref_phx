@@ -1,5 +1,14 @@
 # CircularRefPhx
 
+There can definitely be clean-up in the controller and movement of functions there into
+context functions, but it works.  
+
+Note that it also checks against existing alias records
+for the individual, and if an exact match is found, the individual's :master_alias_id is set
+without inserting a new alias record, and any other updates occur to the individual if they are
+valid.  That logic could be abstracted to some function and then involved in the Mutli pipeline
+I suppose.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
