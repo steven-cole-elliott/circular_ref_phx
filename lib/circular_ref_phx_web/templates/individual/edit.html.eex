@@ -42,7 +42,8 @@
   </div>
 
   <div class="form-group" />
-    <%= submit "SAVE", class: "btn btn-primary" %>
+    <%= submit "Save", class: "btn btn-primary" %>
+    <%= link "Back to Individuals", to: individual_path(assigns.conn, :index), class: "btn btn-default" %>
   </div>
 
 <% end %>
